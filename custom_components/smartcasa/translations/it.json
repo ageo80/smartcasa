@@ -1,0 +1,26 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Configurazione SmartCasa Bridge",
+                "description": "Inserisci i dati ottenuti dalla dashboard AdminLTE per collegare questa istanza di Home Assistant al server centrale.",
+                "data": {
+                    "nome_casa": "Nome di questa installazione (es. Casa Rossi)",
+                    "server_url": "URL del Server (es. https://tuosito.it/domotica)",
+                    "token": "Token Univoco (UUID)",
+                    "api_key": "Chiave API Segreta"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Impossibile connettersi al server PHP. Controlla l'URL.",
+            "invalid_url": "URL non valido.",
+            "invalid_auth": "Token o API Key non validi.",
+            "unknown": "Errore imprevisto durante la configurazione."
+        },
+        "abort": {
+            "already_configured": "Questa istanza di SmartCasa è già stata configurata."
+        }
+    },
+    "title": "SmartCasa Bridge AM"
+}
