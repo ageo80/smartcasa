@@ -11,8 +11,7 @@ Il componente sincronizza automaticamente le entità (luci, tapparelle, interrut
 - **Integrazione HACS**: Facilmente installabile e aggiornabile.
 
 ## 🛠️ Requisiti
-- Un server web con **PHP 7.4+** e **MySQL**.
-- La cartella `domotica` configurata sul tuo web server con il file `api_bridge.php`.
+- accesso al server Smartcasa
 - [HACS](https://hacs.xyz/) installato su Home Assistant.
 
 ## 📦 Installazione tramite HACS
@@ -32,11 +31,11 @@ Dopo il riavvio:
 3. Inserisci i parametri richiesti:
    - **Nome Casa**: Un nome identificativo.
    - **URL Server**: `https://www.tuosito.it/domotica`
-   - **Token**: Il token UUID generato dalla pagina `registra_ha.php`.
-   - **API KEY**: La chiave segreta generata dal server.
+   inserisci i valori 
+   - **Token**
+   - **API KEY**
 
-## 📂 Struttura Database
-L'integrazione richiede le tabelle `ha_servers`, `ha_entities` e `ha_commands`. Assicurati di aver eseguito lo script SQL fornito nella documentazione del server.
+
 
 ## 📝 Debug
 Per attivare i log dettagliati, aggiungi quanto segue al tuo `configuration.yaml`:
