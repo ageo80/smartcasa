@@ -14,6 +14,7 @@
         },
         "error": {
             "cannot_connect": "Impossibile connettersi al server PHP. Controlla l'URL.",
+            "invalid_url": "URL non valido.",
             "invalid_auth": "Token o API Key non validi.",
             "unknown": "Errore imprevisto durante la configurazione."
         },
