@@ -1,0 +1,10 @@
+{
+  "domain": "smartcasa",
+  "name": "SmartCasa Bridge AM",
+  "version": "1.0.2",
+  "documentation": "https://github.com/ageo80/smartcasa",
+  "issue_tracker": "https://github.com/ageo80/smartcasa/issues",
+  "codeowners": ["@tuo-utente"],
+  "iot_class": "cloud_polling",
+  "config_flow": true
+}
