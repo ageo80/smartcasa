@@ -1,8 +1,10 @@
 import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
+from urllib.parse import urlparse
 
 DOMAIN = "smartcasa"
+
 
 class SmartCasaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Gestisce la configurazione iniziale via UI."""
@@ -11,8 +13,15 @@ class SmartCasaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(self, user_input=None):
         errors = {}
         if user_input is not None:
-            # Qui potresti aggiungere un test di connessione al tuo api_bridge.php
-            return self.async_create_entry(title=user_input["nome_casa"], data=user_input)
+            # Validazione minimale dell'URL del server
+            server = user_input.get("server_url", "")
+            parsed = urlparse(server)
+            if not parsed.scheme or not parsed.netloc:
+                errors["server_url"] = "invalid_url"
+
+            if not errors:
+                # Qui potresti aggiungere un test di connessione al tuo api_bridge.php
+                return self.async_create_entry(title=user_input["nome_casa"], data=user_input)
 
         return self.async_show_form(
             step_id="user",
